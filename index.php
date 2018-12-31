@@ -2,7 +2,14 @@
     $title = 'УПРАВЛЕНИЕ ГОЧС ГОРОДА - МКУ "Управление ГОЧС города Белгорода"';
     require_once 'header.php';
     $searchString = $_GET['searchString'];
-    $posts = file_get_contents('http://localhost:3012/news/');
+    var_dump($searchString);
+    if (strlen($searchString)!=0)
+    {
+      $posts = file_get_contents('http://localhost:3012/page/1');
+    }
+    else {
+      $posts = file_get_contents('http://localhost:3012/page/1');
+    }
     
 ?>
 <!-- Begin Body -->
