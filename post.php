@@ -7,10 +7,9 @@
 
   $posts = file_get_contents('http://localhost:3012/news/'.$post_id);
   $posts = json_decode($posts);
-	$title = $posts[0]->{'title'};
+	$title = $posts[0]->{'news_title'};
 
 	require_once 'header.php';
-	//$news =
 ?>
 
 <!-- Begin Body -->
@@ -25,7 +24,7 @@
     			<div class="panel-heading" style="background-color:#111;color:#fff;"><?PHP echo $ticker; ?></div>
 					<!--пошла конкретная новость-->
 					<div class="panel-body">
-            <h2><?PHP echo $posts[0]->{'title'}?></h2>
+            <h2><?PHP echo $posts[0]->{'news_title'}?></h2>
             <?PHP echo $posts[0]->{'news_txt'} ?>
             <br><hr>
           </div>
