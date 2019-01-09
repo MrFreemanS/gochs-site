@@ -2,11 +2,11 @@
     $title = 'УПРАВЛЕНИЕ ГОЧС ГОРОДА - МКУ "Управление ГОЧС города Белгорода"';
     require_once 'header.php';
 
+    $page = (isset($_GET['page'])) ? $_GET['page'] : 1; //если первая стр
+    $startPoint = $page - 1;
     $searchString = $_GET['searchString'];
-    $page = $_GET['page'];
 
-
-    if (strlen($searchString)!=0) {
+    if(isset($_GET['searchString'])) {
       $posts = file_get_contents('http://localhost:3012/search/'.$searchString);
     }
     else {
@@ -25,8 +25,6 @@
     			<div class="panel-heading" style="background-color:#111;color:#fff;">
           <div class="marquee">
              <?PHP echo $ticker; ?>
-             <!-- Default switch -->
-            <input type="checkbox" checked data-toggle="toggle">
            </div>
           </div>
 					<?php
@@ -36,6 +34,7 @@
 						exit();
 					}
 					$posts = json_decode($posts);
+          //цикл новостей
 					foreach ($posts as $post):?>
 					<!--пошла конкретная новость-->
 					<div class="panel-body">
@@ -50,19 +49,20 @@
 					  </div>
 						<!--конец конкретной новости -->
 						<?PHP endforeach; ?>
+
+            <?PHP
+            if(isset($_GET['searchString'])==FALSE)
+            {
+            ?>
             <center>
               <ul class="pager">
-                <li><a href="/index.php?page=
-                  <?php
-                  if ($page>1)
-                  {
-                    $page-1;
-                  }
-                  ?>
-                 ">Предыдущая</a></li>
-                <li><a href="/index.php?page=<?php echo $page+1 ?>">Следующая</a></li>
+                <li><a href="/index.php?page=<?php echo $page - 1?>">Предыдущая</a></li>
+                <li><a href="/index.php?page=<?php echo $page + 1?>">Следующая</a></li>
               </ul>
             </center>
+            <?php
+            }
+            ?>
 					</div>
 				</div>
 					<!--конец новостей-->
