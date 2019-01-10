@@ -23,9 +23,7 @@
       		<div class="col-md-9" id="content">
           <div class="panel">
     			<div class="panel-heading" style="background-color:#111;color:#fff;">
-          <div class="marquee">
-             <?PHP echo $ticker; ?>
-           </div>
+            <marquee><?PHP echo $ticker; ?></marquee>
           </div>
 					<?php
 					if ($posts==NULL)
