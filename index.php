@@ -12,7 +12,7 @@
     else {
       $posts = file_get_contents('http://localhost:3012/page/'.$page);
     }
-
+    
 ?>
 <!-- Begin Body -->
 <div class="container">
