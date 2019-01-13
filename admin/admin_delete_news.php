@@ -10,7 +10,7 @@ $myCurl = curl_init();
 curl_setopt_array($myCurl, array(
 CURLOPT_URL => 'http://localhost:3012/news/',
 CURLOPT_RETURNTRANSFER => true,
-CURLOPT_CUSTOMREQUEST => "DELETE",
+CURLOPT_CUSTOMREQUEST =>  'DELETE',
 CURLOPT_POSTFIELDS => $string
 ));
 

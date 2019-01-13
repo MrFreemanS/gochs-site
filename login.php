@@ -1,4 +1,13 @@
 <?php
+
+  session_start();
+  //var_dump($_SESSION['login']);
+  if (isset($_SESSION['login']))
+  {
+    header("Location: /admin/admin.php");
+    exit();
+  }
+
     $title = 'Админка';
     require_once 'header.php';
 ?>
@@ -22,5 +31,3 @@
     </div>
   </div>
 </form>
-
-<?PHP require_once 'footer.php';?>

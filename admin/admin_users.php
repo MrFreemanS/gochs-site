@@ -20,7 +20,7 @@ require_once 'admin_header.php';
       <input class="form-control" id="myInput" type="text" placeholder="Поиск в отображённом">
     </div>
     <div class="col-md-7"></div>
-    <div class="col-md-2"><button class="btn btn-success">добавить</button></div>
+    <div class="col-md-2"><a href="admin_edit_news.php"><button class="btn btn-success">Добавить</button></a></div>
 
   </div>
     <br>
