@@ -1,7 +1,3 @@
-<?php
-    $ticker = 'срочная новость';
-?>
-
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
@@ -11,14 +7,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/css/font-awesome.min.css" rel="stylesheet">
-		<link href="/css/styles.css" rel="stylesheet">
+
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
-	<nav class="navbar navbar-static">
-	 <div class="container"></div>
-	</nav><!-- /.navbar -->
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Пользователи</a></li>
+        <li><a href="#">Элементы сайта</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Выйти</a></li>
+      </ul>
+    </div>
+  </nav><!-- /.navbar -->
 
 	<header class="masthead">
 	<div class="container">
@@ -27,18 +34,10 @@
 				<a href="/"><img src="/img/logo.png" width="270" height="191"  class="img-fluid" alt="logo"></a>
 
 			</div>
-			<div class="col-md-5"></div>
-			<div class="col-md-4">
-        <?php if ($title!="Админка"){?>
-
-          <form class="navbar-form navbar-left" role="search">
-  					<div class="form-group">
-  						<input type="text" class="form-control" name="searchString" placeholder="Ключевое слово">
-  					</div>
-  					<button type="submit" class="btn btn-default">Искать</button>
-  				</form>
-        <?php }?>
-			</div>
+			<div class="col-md-9"></div>
 		</div>
 	</div>
 	</header>
+  <div class="panel panel-default">
+    <div class="panel-heading"></div>
+    </div>
