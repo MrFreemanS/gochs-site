@@ -17,12 +17,12 @@
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Пользователи</a></li>
+        <li><a href="admin.php">Новости</a></li>
+        <li><a href="admin_users.php">Пользователи</a></li>
         <li><a href="#">Элементы сайта</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Выйти</a></li>
+        <li><a href="/logout.php">Выйти</a></li>
       </ul>
     </div>
   </nav><!-- /.navbar -->
