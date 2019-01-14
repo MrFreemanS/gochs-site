@@ -11,8 +11,6 @@ $posts = file_get_contents('http://localhost:3012/users/'.$page);
 require_once 'admin_header.php';
 ?>
 
-
-
   <div class="container">
     <h2>Список пользователей</h2>
     <div class="row">

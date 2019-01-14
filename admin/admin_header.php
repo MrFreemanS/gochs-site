@@ -19,6 +19,7 @@
       <ul class="nav navbar-nav">
         <li><a href="admin.php">Новости</a></li>
         <li><a href="admin_users.php">Пользователи</a></li>
+        <li><a href="admin.php">Инциденты</a></li>
         <li><a href="#">Элементы сайта</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
