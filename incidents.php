@@ -5,8 +5,13 @@
     $page = (isset($_GET['page'])) ? $_GET['page'] : 1; //если первая стр
     $startPoint = $page - 1;
     $searchString = $_GET['searchString'];
-    $posts = file_get_contents('http://localhost:3012/inc_page/'.$page);
 
+    if(isset($_GET['searchString'])) {
+      $posts = file_get_contents('http://localhost:3012/search/'.$searchString);
+    }
+    else {
+      $posts = file_get_contents('http://localhost:3012/inc/'.$page);
+    }
 
 ?>
 
@@ -33,12 +38,12 @@
 					<!--пошла конкретная новость-->
 					<div class="panel-body">
 						<!-- Заголовок-->
-						<h3><?=$post->{'news_title'}?></h3>
+						<h3><?=$post->{'inc_title'}?></h3>
 					  <!-- кототкая новость -->
-						<?=mb_substr($post->{'news_txt'},0,500,'UTF-8').'...'?>
+						<?=mb_substr($post->{'inc_txt'},0,500,'UTF-8').'...'?>
 					  <br><br>
 					  <!-- кончилась -->
-					 <a href="/post.php?post_id=<?=$post->{'news_id'}?>"> <button class="btn btn-default">Подробнее</button></a>
+					 <a href="/post_inc.php?post_id=<?=$post->{'inc_id'}?>"> <button class="btn btn-default">Подробнее</button></a>
 					  <br><hr>
 					  </div>
 						<!--конец конкретной новости -->

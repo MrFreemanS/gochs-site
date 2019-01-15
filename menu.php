@@ -9,6 +9,7 @@
           <li><a href="/">Новости</a></li>
           <li><a href="/post.php?post_id=1">О нас</a></li>
           <li><a href="/post.php?post_id=2">Информация для населения</a></li>
+          <li><a href="/incidents.php">Инциденты</a></li>
     </ul>
       </div>
       </div>
