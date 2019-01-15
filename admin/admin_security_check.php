@@ -1,4 +1,5 @@
 <?php
+require_once '../config.php';
 session_start();
 //var_dump($_SESSION['login']);
 if (!(isset($_SESSION['login'])))
@@ -12,7 +13,7 @@ else {
 
   $myCurl = curl_init();
   curl_setopt_array($myCurl, array(
-  CURLOPT_URL => 'http://localhost:3012/isadmin/',
+  CURLOPT_URL => API_HOST.'/isadmin/',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_POST => true,
   CURLOPT_POSTFIELDS => $string

@@ -1,4 +1,5 @@
 <?php
+require_once 'config.php';
 if (!(isset($_POST["login"])) && !(isset($_POST["password"])))
 {
 	header("Location: /login.php");
@@ -10,7 +11,7 @@ else {
 
 	$myCurl = curl_init();
 	curl_setopt_array($myCurl, array(
-	CURLOPT_URL => 'http://localhost:3012/login/',
+	CURLOPT_URL => API_HOST.'/login/',
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_POST => true,
 	CURLOPT_POSTFIELDS => $string

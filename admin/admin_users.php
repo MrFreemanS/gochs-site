@@ -7,7 +7,7 @@ if($page<1){
   $page=1;
 }
 $startPoint = $page - 1;
-$posts = file_get_contents('http://localhost:3012/users/'.$page);
+$posts = file_get_contents(API_HOST.'/users/'.$page);
 require_once 'admin_header.php';
 ?>
 

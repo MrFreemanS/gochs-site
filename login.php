@@ -7,9 +7,9 @@
     header("Location: /admin/admin.php");
     exit();
   }
-
+require_once 'header.php';
     $title = 'Админка';
-    require_once 'header.php';
+
 ?>
 
 <form class="form-horizontal" action="autorize.php" method="post">

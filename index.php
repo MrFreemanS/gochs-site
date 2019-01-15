@@ -7,10 +7,11 @@
     $searchString = $_GET['searchString'];
 
     if(isset($_GET['searchString'])) {
-      $posts = file_get_contents('http://localhost:3012/search/'.$searchString);
+
+      $posts = file_get_contents(API_HOST.'/search/'.$searchString);
     }
     else {
-      $posts = file_get_contents('http://localhost:3012/page/'.$page);
+      $posts = file_get_contents(API_HOST.'/page/'.$page);
     }
 
 ?>

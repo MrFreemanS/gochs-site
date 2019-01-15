@@ -7,7 +7,7 @@ if($page<1){
   $page=1;
 }
 $startPoint = $page - 1;
-$posts = file_get_contents(API_HOST.'/page/'.$page);
+$posts = file_get_contents(API_HOST.'/inc/'.$page);
 require_once 'admin_header.php';
 ?>
 
@@ -20,7 +20,7 @@ require_once 'admin_header.php';
       <input class="form-control" id="myInput" type="text" placeholder="Поиск в отображённом">
     </div>
     <div class="col-md-7"></div>
-    <div class="col-md-2"><a href="admin_add_news.php"><button class="btn btn-success">Добавить</button></a></div>
+    <div class="col-md-2"><a href="admin_add_inc.php"><button class="btn btn-success">Добавить</button></a></div>
 
   </div>
     <br>
@@ -42,12 +42,12 @@ require_once 'admin_header.php';
 
       <div class="container">
         <div class="row">
-            <div class="col-md-7"><li class="list-group-item"><?=$post->{'news_title'}?></li></div>
+            <div class="col-md-7"><li class="list-group-item"><?=$post->{'inc_title'}?></li></div>
         </div>
         <div class="row">
           <div class="col-md-3">
-            <a href="admin_edit_news.php?id=<?=$post->{'news_id'}?>"><button class="btn btn-info">Редактировать</button></a>
-            <a href="admin_delete_news.php?id=<?=$post->{'news_id'}?>"><button class="btn btn-danger">Удалить</button></a>
+            <a href="admin_edit_inc.php?id=<?=$post->{'inc_id'}?>"><button class="btn btn-info">Редактировать</button></a>
+            <a href="admin_delete_inc.php?id=<?=$post->{'inc_id'}?>"><button class="btn btn-danger">Удалить</button></a>
           </div>
         </div>
         <hr>

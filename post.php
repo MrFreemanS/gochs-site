@@ -4,12 +4,12 @@
 	{
 		exit();
 	}
-
-  $posts = file_get_contents('http://localhost:3012/news/'.$post_id);
+require_once 'header.php';
+  $posts = file_get_contents(API_HOST.'/news/'.$post_id);
   $posts = json_decode($posts);
 	$title = $posts[0]->{'news_title'};
 
-	require_once 'header.php';
+
 ?>
 
 <!-- Begin Body -->
